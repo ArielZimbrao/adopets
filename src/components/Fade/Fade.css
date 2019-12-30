@@ -1,0 +1,28 @@
+.ant-spin-lg .ant-spin-dot {
+    font-size: 60px !important;
+}
+
+.ant-spin-lg .ant-spin-dot i {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 70px;
+}
+
+.ant-spin-dot-item {
+    background-color: #ce3f71;
+}
+
+.fade {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255,255,255, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+

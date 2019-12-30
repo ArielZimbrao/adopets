@@ -1,7 +1,8 @@
 import React from 'react';
-import logo from '../../asserts/logo2.png';
-import { Select, Col, Row, Card, Button, Icon, Spin } from 'antd';
+import { Select, Col, Row, Card, Icon } from 'antd';
 import './Search.css'
+import HeaderComponent from '../../components/Header/Header.compoents';
+import FadeComponent from '../../components/Fade/Fade.components';
 
 type SearchProps = {
     exit: Function,
@@ -42,17 +43,9 @@ const SearchPage = ({exit, onChangeFilter, pets, page, pagination, load, onChang
 
   return (
     <div className="Search">
-        <header className="header">
-            <a href="/" className="logo">
-                <img src={logo} alt="logo"/>
-                Adopets
-            </a>
-            <div className="header-right">
-                <Button className="buttonExit" type="primary" onClick={() => exit()}>
-                    Exit
-                </Button>
-            </div>
-        </header>
+        <HeaderComponent
+            exit={exit}
+        />
         <div style={{ width: '100%', height: '100%'}}>
             <Row style={{ padding: '30px 30px'}}>
                 <Col span={8}>
@@ -106,11 +99,7 @@ const SearchPage = ({exit, onChangeFilter, pets, page, pagination, load, onChang
             </Row>
             <Row>
                 <div className="gridCard" style={{ height: window.innerHeight - 210}}>
-                    {
-                        load && <div className="fade">
-                            <Spin className="spin" size="large" />
-                        </div>
-                    }
+                    <FadeComponent load={load}/>
                     {
                         pets.map((pet: any) => {
                             return <Card className="cardPet">

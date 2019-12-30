@@ -1,5 +1,4 @@
 import * as axios from 'axios'
-import MemoryStorage from '../../memory_storage';
 
 export default class SearchApi {
 
@@ -69,7 +68,7 @@ export default class SearchApi {
         }
         return axios.default.post(url, body, {
             headers: {
-                Authorization: 'Bearer ' + MemoryStorage.get('key-user')
+                Authorization: 'Bearer ' + sessionStorage.getItem('key-user')
             }
         }).then((response) => {
             if (response.data.status === 200) {

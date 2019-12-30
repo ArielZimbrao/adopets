@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchPage from './Search.page';
-import MemoryStorage from '../../memory_storage';
 import SearchApi from './Search.api';
 
 
@@ -22,12 +21,11 @@ class SearchContainer extends React.Component<{}, MyState> {
     };
 
     componentDidMount() {
-        var user = MemoryStorage.get('user');
+        var user = sessionStorage.getItem('key-user');
         if (!user) {
             this.exit();
         }
         this.search();
-        
     }
 
     exit() {
