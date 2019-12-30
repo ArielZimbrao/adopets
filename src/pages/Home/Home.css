@@ -1,0 +1,47 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+  background-color: #ce3f71;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+
+.divHeader {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 30%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.divHeader .Inputs  input {
+    width: 85% !important;
+    height: 50px !important;
+    font-size: 18px;
+}
+
+.divHeader .Inputs {
+    padding: 10px 0px;
+    color: #ce3f71;
+}
+
+.imgLogo {
+    margin-top: 20px;
+}
+
+.buttonEnter {
+    background-color: #ce3f71 !important;
+    border-color: #ce3f71 !important;
+    width: 85% !important;
+    height: 50px !important;
+    font-family: monospace;
+    font-size: 28px !important;
+    font-weight: 1000 !important;
+}
