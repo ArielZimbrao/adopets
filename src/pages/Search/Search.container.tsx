@@ -53,7 +53,7 @@ class SearchContainer extends React.Component<{}, MyState> {
     }
 
     onChangeFilter(key: string, value: string) {
-        this.setState({ [key]: value })
+        this.setState({ [key]: value, page: 1 })
         setTimeout(() => {
             this.search();
         })
